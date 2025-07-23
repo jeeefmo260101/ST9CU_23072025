@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menavigasi Zona Abu-Abu Gratifikasi</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .bg-brand-primary { background-color: #00A6A6; }
+        .bg-brand-secondary { background-color: #75B79E; }
+        .bg-brand-accent-yellow { background-color: #F2E205; }
+        .bg-brand-accent-orange-light { background-color: #F2B705; }
+        .bg-brand-accent-orange-dark { background-color: #F29F05; }
+        .text-brand-primary { color: #00A6A6; }
+        .text-brand-dark { color: #333; }
+        .border-brand-primary { border-color: #00A6A6; }
+        .flowchart-arrow-down {
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-top: 12px solid #F29F05;
+            width: 0;
+            height: 0;
+            margin: 1rem auto;
+        }
+        .chart-container {
+            position: relative;
+            margin-left: auto;
+            margin-right: auto;
+            height: 280px;
+            max-height: 350px;
+            width: 100%;
+            max-width: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 350px;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-brand-dark">
+
+    <div class="container mx-auto p-4 md:p-8">
+        
+        <header class="text-center mb-12">
+            <h1 class="text-4xl md:text-5xl font-extrabold text-brand-primary mb-2">Kapan Hadiah Bukan Lagi Sekadar Hadiah?</h1>
+            <p class="text-lg md:text-xl text-gray-600">Panduan Visual untuk Menavigasi Zona Abu-Abu Gratifikasi</p>
+        </header>
+
+        <main class="space-y-16">
+
+            <section id="hook" class="text-center bg-white p-8 rounded-xl shadow-lg">
+                <p class="text-2xl font-semibold mb-4">Setiap pemberian kepada Aparatur Negara memiliki potensi risiko.</p>
+                <div class="flex items-center justify-center space-x-4">
+                    <p class="text-lg text-gray-700">Jaring pengaman utamanya adalah batas waktu pelaporan:</p>
+                    <div class="bg-brand-accent-orange-dark text-white p-4 rounded-lg">
+                        <p class="text-5xl font-black">30</p>
+                        <p class="text-lg font-bold">Hari Kerja</p>
+                    </div>
+                </div>
+                <p class="mt-4 text-sm text-gray-500">Jika gratifikasi terkait jabatan tidak dilaporkan dalam 30 hari kerja ke KPK, maka dianggap suap.</p>
+            </section>
+
+            <section id="definisi">
+                <div class="text-center mb-8">
+                    <h2 class="text-3xl font-bold text-brand-primary">Lingkup Gratifikasi</h2>
+                    <p class="mt-2 text-gray-600">Gratifikasi adalah pemberian dalam arti luas, mencakup berbagai bentuk.</p>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 text-center">
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <span class="text-5xl">💰</span>
+                        <h3 class="font-bold mt-2 text-lg">Uang & Setara</h3>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <span class="text-5xl">🎁</span>
+                        <h3 class="font-bold mt-2 text-lg">Barang</h3>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <span class="text-5xl">✈️</span>
+                        <h3 class="font-bold mt-2 text-lg">Fasilitas</h3>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <span class="text-5xl">🏷️</span>
+                        <h3 class="font-bold mt-2 text-lg">Diskon & Lainnya</h3>
+                    </div>
+                </div>
+            </section>
+
+            <section id="zona-abu-abu" class="bg-white p-6 md:p-8 rounded-xl shadow-lg">
+                <div class="text-center mb-8">
+                   <h2 class="text-3xl font-bold text-brand-primary">Menavigasi Zona Abu-Abu: Kapan Tidak Perlu Lapor?</h2>
+                   <p class="mt-2 text-gray-600">Ada beberapa situasi di mana pemberian dianggap wajar dan dikecualikan dari kewajiban lapor, **selama tidak ada konflik kepentingan**.</p>
+               </div>
+               <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="border-l-4 border-brand-secondary p-4 bg-gray-50 rounded-r-lg">
+                        <h3 class="font-bold text-lg text-brand-primary">1. Dari Lingkar Keluarga</h3>
+                        <p class="text-gray-600">Hadiah dari keluarga dekat (orang tua, anak, kakek/nenek, sepupu) dianggap wajar. Namun, menjadi wajib lapor jika pemberi memiliki hubungan bisnis atau kepentingan dengan jabatan Anda.</p>
+                    </div>
+                    <div class="border-l-4 border-brand-secondary p-4 bg-gray-50 rounded-r-lg">
+                        <h3 class="font-bold text-lg text-brand-primary">2. Acara Adat & Keagamaan</h3>
+                        <p class="text-gray-600">Pemberian dalam acara seperti pernikahan atau aqiqah boleh diterima dengan batas nilai wajar **maksimal Rp1.000.000 per pemberi**.</p>
+                    </div>
+                    <div class="border-l-4 border-brand-secondary p-4 bg-gray-50 rounded-r-lg">
+                        <h3 class="font-bold text-lg text-brand-primary">3. Solidaritas Sesama Pegawai</h3>
+                        <p class="text-gray-600">Hadiah untuk pisah sambut atau ulang tahun dari rekan kerja wajar diterima jika iuran per orang **maksimal Rp300.000** dan total dari 1 orang dalam setahun tidak lebih dari Rp1.000.000.</p>
+                    </div>
+                    <div class="border-l-4 border-brand-secondary p-4 bg-gray-50 rounded-r-lg">
+                        <h3 class="font-bold text-lg text-brand-primary">4. Kompensasi Profesional</h3>
+                        <p class="text-gray-600">Honorarium sebagai pembicara atau penulis di luar tugas kedinasan boleh diterima, asalkan tidak menggunakan fasilitas dinas dan tidak ada konflik kepentingan.</p>
+                    </div>
+               </div>
+            </section>
+            
+            <section id="burden-of-proof">
+                <div class="text-center mb-8">
+                    <h2 class="text-3xl font-bold text-brand-primary">Beban Pembuktian di Mata Hukum</h2>
+                    <p class="mt-2 text-gray-600">Nilai gratifikasi menentukan siapa yang harus membuktikan sifat pemberian tersebut.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-white p-8 rounded-lg shadow-md border-t-8 border-brand-accent-orange-dark text-center">
+                        <h3 class="text-2xl font-bold mb-2">Nilai ≥ Rp 10 Juta</h3>
+                        <p class="text-gray-700 font-semibold">Penerima wajib membuktikan bahwa pemberian tersebut **BUKAN SUAP**.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-lg shadow-md border-t-8 border-brand-secondary text-center">
+                        <h3 class="text-2xl font-bold mb-2">Nilai &lt; Rp 10 Juta</h3>
+                        <p class="text-gray-700 font-semibold">Jaksa Penuntut Umum yang wajib membuktikan bahwa pemberian tersebut **ADALAH SUAP**.</p>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="scope" class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div class="bg-white p-6 md:p-8 rounded-xl shadow-lg">
+                     <h2 class="text-3xl font-bold text-brand-primary mb-4">Siapa Saja yang Terikat Aturan?</h2>
+                     <p class="text-gray-600 mb-4">Definisi "Pegawai Negeri" dalam konteks ini sangat luas, tidak hanya Aparatur Sipil Negara (ASN). Ini mencakup semua individu yang menerima upah dari keuangan atau fasilitas negara, yang berarti cakupannya jauh lebih besar dari yang diperkirakan banyak orang.</p>
+                     <p class="text-gray-600">Oleh karena itu, pegawai BUMN, BUMD, atau bahkan staf di lembaga swasta yang mengelola dana negara juga wajib mematuhi aturan pelaporan gratifikasi.</p>
+                </div>
+                <div class="bg-white p-6 md:p-8 rounded-xl shadow-lg">
+                    <div class="chart-container">
+                        <canvas id="pegawaiNegeriChart"></canvas>
+                    </div>
+                    <p class="text-center text-sm text-gray-500 mt-2">Komposisi subjek hukum gratifikasi (ilustratif).</p>
+                </div>
+            </section>
+            
+            <section id="conclusion" class="bg-brand-primary text-white text-center p-8 rounded-xl shadow-lg">
+                <h2 class="text-3xl font-bold mb-4">Prinsip Utama: Jika Ragu, Laporkan!</h2>
+                <p class="text-lg mb-6">Melaporkan bukanlah tanda bersalah, melainkan bentuk integritas dan perlindungan diri dari risiko hukum. Tindakan paling aman adalah melaporkan setiap penerimaan yang berpotensi dianggap gratifikasi ke KPK.</p>
+                <a href="https://gol.kpk.go.id/" target="_blank" class="bg-white text-brand-primary font-bold py-3 px-8 rounded-full hover:bg-gray-200 transition-colors text-lg shadow-md">Kunjungi GOL KPK</a>
+            </section>
+
+        </main>
+
+        <footer class="text-center mt-16 pt-8 border-t border-gray-300">
+            <p class="text-sm text-gray-500">&copy; Informasi disadur dari materi publik mengenai gratifikasi di Indonesia. </p>
+            <p class="text-sm text-gray-500">&copy; 2025 Tim Layanan Pengembangan Kompetensi dan Hukum BPS Provinsi Sumatera Utara. </p>
+        </footer>
+    </div>
+
+    <script>
+        function wrapLabel(str, maxWidth) {
+            if (str.length <= maxWidth) {
+                return str;
+            }
+            const words = str.split(' ');
+            let lines = [];
+            let currentLine = words[0];
+            for (let i = 1; i < words.length; i++) {
+                if (currentLine.length + words[i].length + 1 <= maxWidth) {
+                    currentLine += ' ' + words[i];
+                } else {
+                    lines.push(currentLine);
+                    currentLine = words[i];
+                }
+            }
+            lines.push(currentLine);
+            return lines;
+        }
+        
+        const tooltipTitleCallback = (tooltipItems) => {
+            const item = tooltipItems[0];
+            let label = item.chart.data.labels[item.dataIndex];
+            if (Array.isArray(label)) {
+                return label.join(' ');
+            }
+            return label;
+        };
+        
+        const pegawaiNegeriData = {
+            labels: ['ASN (PNS & PPPK)', 'Pegawai BUMN/BUMD', wrapLabel('Staf Lembaga Pengelola APBN/APBD', 16), 'Pejabat Publik Lainnya'],
+            datasets: [{
+                label: 'Komposisi Pegawai Negeri',
+                data: [40, 25, 20, 15],
+                backgroundColor: [
+                    '#00A6A6',
+                    '#75B79E',
+                    '#F2B705',
+                    '#F29F05'
+                ],
+                borderColor: '#FFFFFF',
+                borderWidth: 2,
+                hoverOffset: 4
+            }]
+        };
+
+        const pegawaiNegeriConfig = {
+            type: 'doughnut',
+            data: pegawaiNegeriData,
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                        labels: {
+                            font: {
+                                family: "'Inter', sans-serif"
+                            },
+                             boxWidth: 15,
+                             padding: 20
+                        }
+                    },
+                    tooltip: {
+                         callbacks: {
+                            title: tooltipTitleCallback
+                        }
+                    },
+                    title: {
+                        display: true,
+                        text: 'Cakupan Luas "Pegawai Negeri"',
+                         font: {
+                            size: 16,
+                            family: "'Inter', sans-serif",
+                            weight: 'bold'
+                        },
+                        color: '#333',
+                        padding: {
+                            top: 10,
+                            bottom: 10
+                        }
+                    }
+                },
+                cutout: '60%'
+            }
+        };
+
+        const pegawaiNegeriChartCtx = document.getElementById('pegawaiNegeriChart').getContext('2d');
+        new Chart(pegawaiNegeriChartCtx, pegawaiNegeriConfig);
+
+    </script>
+</body>
+</html>
